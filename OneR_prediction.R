@@ -1,3 +1,6 @@
+# plot  libraries
+library(ggplot2)
+library(tidyr) 
 
 ############## ONE R Classifier #########################
 
@@ -61,9 +64,7 @@ write.csv(train.data, "train_data.csv", row.names = FALSE)
 
 
 # plot for draft 
-library(ggplot2)
-library(tidyr)
-predictions_long <- gather(predictions_df, Classifier, Predictions, -Actual)
+
 
 # bar plot
 

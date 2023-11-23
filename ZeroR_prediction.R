@@ -6,7 +6,7 @@ train.data <- read.csv("train_data.csv")
 # extracting the majority class 
 
 majority <- as.numeric(names(sort(table(train.data$Survived), decreasing = FALSE ))[2])
-cat("The Zero R classifier prediction is: ",majority)
+cat("===> The Zero R classifier prediction is: ",majority)
 
 # adding prediction to table
 zero_r_predictions <- rep(majority, nrow(train.data))
@@ -22,4 +22,6 @@ cat("Accuracy of Zero-R Classifier:", zero_r_accuracy, "\n")
 
 
 write.csv(train.data, "train_data.csv", row.names = FALSE)
+
+
 
